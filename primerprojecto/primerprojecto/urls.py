@@ -16,10 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from primeraapp.views import saludo
-from primeraapp.views import despedida
-from primeraapp.views import mostrar_template
-from primeraapp.views import damefecha
+from primeraapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +24,5 @@ urlpatterns = [
     path('despedida/', despedida),
     path('mostrar_template/', mostrar_template),
     path('fecha/', damefecha),
+    path('edades/<int:age>/<int:year>', calcula_edad), #forma de decirle a django que le ingresare un parametro
 ]

@@ -40,3 +40,12 @@ def damefecha(request):
     </html>"""
     
     return HttpResponse(documento)
+
+def calcula_edad(request,year,age):
+
+    periodo = year - 2024
+    edadFutura = age + periodo
+    
+    documento = f"""<html><body><h2>En el año {year} tu edad es {edadFutura}</h2></body></html>"""
+    
+    return HttpResponse(documento)
