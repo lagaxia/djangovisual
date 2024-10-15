@@ -19,10 +19,12 @@ from django.urls import path
 from primeraapp.views import saludo
 from primeraapp.views import despedida
 from primeraapp.views import mostrar_template
+from primeraapp.views import damefecha
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
     path('despedida/', despedida),
     path('mostrar_template/', mostrar_template),
+    path('fecha/', damefecha),
 ]
